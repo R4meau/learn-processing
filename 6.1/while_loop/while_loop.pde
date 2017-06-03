@@ -10,12 +10,11 @@ void setup() {
 
 void draw() {
   for (int x = 0; x < width; x = x + squareSize) {
-    for (int y = 0; y < height; y = y + squareSize) {
+    for (int y = 0; y < height; y = y + 2squareSize) {
       float c = dist(x, y, mouseX, mouseY);
       // noStroke();
       fill(c / brushSize, random(255), random(255));
       rect(x, y, squareSize, squareSize);
-      rect(2 * centerX - x, 2 * centerY - y, squareSize, squareSize);
     }
   }
 }
